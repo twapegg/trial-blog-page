@@ -1,15 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Cormorant_Garamond, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
+import SiteHeader from "./components/SiteHeader";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const bodyFont = Source_Sans_3({
+  variable: "--font-body",
   subsets: ["latin"],
+  weight: ["300", "400", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const headingFont = Cormorant_Garamond({
+  variable: "--font-head",
   subsets: ["latin"],
+  weight: ["500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -25,9 +28,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${bodyFont.variable} ${headingFont.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <SiteHeader />
+        <div className="pt-24">{children}</div>
+      </body>
     </html>
   );
 }
