@@ -78,7 +78,7 @@ export default function PhotokeratitisPost() {
             className="bg-white"
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: true, amount: 0.01 }}
             variants={fadeUp}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
@@ -267,7 +267,7 @@ export default function PhotokeratitisPost() {
             className="space-y-6"
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: true, amount: 0.01 }}
             variants={fadeUp}
             transition={{ duration: 0.5, ease: "easeOut", delay: 0.05 }}
           >
