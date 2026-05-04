@@ -42,16 +42,16 @@ export default function PhotokeratitisPost() {
   };
 
   return (
-    <div className="page-shell text-[var(--foreground)] font-sans">
+    <div className="page-shell text-foreground font-sans">
       <main className="mx-auto w-full max-w-6xl px-4 pb-16 sm:px-6 sm:pb-20">
         <motion.section
-          className="relative mt-6 overflow-hidden rounded-[var(--radius)] shadow-[0_20px_40px_rgba(0,0,0,0.12)] sm:mt-8"
+          className="relative mt-6 overflow-hidden rounded-(--radius) shadow-[0_20px_40px_rgba(0,0,0,0.12)] sm:mt-8"
           initial="hidden"
           animate="show"
           variants={fadeUp}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-[21/9]">
+          <div className="relative w-full aspect-4/3 sm:aspect-video lg:aspect-21/9">
             <Image
               src="/assets/hero-uv-kids.svg"
               alt="Family wearing sunglasses outdoors"
@@ -60,7 +60,7 @@ export default function PhotokeratitisPost() {
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1024px"
               style={{ objectFit: "cover" }}
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/25 to-black/10" />
+            <div className="absolute inset-0 bg-linear-to-r from-black/45 via-black/25 to-black/10" />
           </div>
           <div className="absolute bottom-4 left-4 max-w-2xl text-white sm:bottom-6 sm:left-8">
             <p className="text-[10px] uppercase tracking-[0.3em] sm:text-xs">

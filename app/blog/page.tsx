@@ -15,14 +15,23 @@ export default function BlogIndexPage() {
     <div className="page-shell text-[var(--foreground)] font-sans">
       <main className="mx-auto w-full max-w-6xl px-6 py-12">
         <div className="mb-8">
-          <p className="text-xs uppercase tracking-[0.3em] text-[var(--muted)]">Resources</p>
+          <p className="text-xs uppercase tracking-[0.3em] text-[var(--muted)]">
+            Resources
+          </p>
           <h1 className="mt-2 text-3xl font-extrabold text-[#1f1f1f]">Blog</h1>
         </div>
         <div className="grid gap-6 md:grid-cols-2">
           {posts.map((post) => (
-            <article key={post.title} className="rounded-[var(--radius)] border border-[var(--border)] bg-white p-6">
-              <p className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">{post.tag}</p>
-              <h2 className="mt-3 text-xl font-bold text-[#1f1f1f]">{post.title}</h2>
+            <article
+              key={post.title}
+              className="rounded-[var(--radius)] border border-[var(--border)] bg-white p-6"
+            >
+              <p className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">
+                {post.tag}
+              </p>
+              <h2 className="mt-3 text-xl font-bold text-[#1f1f1f]">
+                {post.title}
+              </h2>
               <p className="mt-3 text-sm text-[var(--muted)]">{post.excerpt}</p>
               <Link
                 href={post.href}
