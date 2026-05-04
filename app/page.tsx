@@ -20,7 +20,7 @@ export default function Home() {
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:gap-4">
               <Link
-                href="/blog/photokeratitis"
+                href="/blog/uv-kids"
                 className="inline-flex w-full items-center justify-center rounded-full border border-[var(--primary)] bg-[var(--primary)] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-[var(--primary)] sm:w-auto"
               >
                 Read the featured post
@@ -45,7 +45,7 @@ export default function Home() {
                   UV Eye Protection for Kids: Everyday Habits That Matter
                 </p>
                 <Link
-                  href="/blog/photokeratitis"
+                  href="/blog/uv-kids"
                   className="mt-3 inline-block text-sm font-semibold text-[var(--primary)]"
                 >
                   Read now →

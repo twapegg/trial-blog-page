@@ -59,6 +59,7 @@ export default function PhotokeratitisPost() {
               priority
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1024px"
               style={{ objectFit: "cover" }}
+              id="hero"
             />
             <div className="absolute inset-0 bg-linear-to-r from-black/45 via-black/25 to-black/10" />
           </div>
@@ -192,7 +193,7 @@ export default function PhotokeratitisPost() {
 
             <div className="mt-10 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:gap-4">
               <Link
-                href="/assets/blog%20photokeratitis%20reskin.pdf"
+                href="#hero"
                 className="inline-flex w-full items-center justify-center rounded-full border border-[var(--primary)] bg-[var(--primary)] px-6 py-3 text-sm font-semibold text-white shadow-[0_8px_20px_rgba(123,177,58,0.35)] transition-colors hover:bg-white hover:text-[var(--primary)] sm:w-auto"
               >
                 Download PDF
@@ -290,7 +291,7 @@ export default function PhotokeratitisPost() {
                 guide your family.
               </p>
               <Link
-                href="#"
+                href="#hero"
                 className="mt-4 inline-flex w-full items-center justify-center rounded-full border border-[var(--primary)] bg-[var(--primary)] px-auto py-3 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(159,208,103,0.35)] transition-colors hover:bg-white hover:text-[var(--primary)]"
               >
                 Schedule an appointment

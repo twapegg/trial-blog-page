@@ -5,7 +5,7 @@ const posts = [
     title: "UV Eye Protection for Kids: Everyday Habits That Matter",
     excerpt:
       "Practical tips to reduce UV exposure and build healthy habits for children and families.",
-    href: "/blog/photokeratitis",
+    href: "/blog/uv-kids",
     tag: "Guide",
   },
 ];
