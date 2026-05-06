@@ -63,6 +63,7 @@ const eyewearExamples = [
     title: "Category 4",
     summary: "Maximum protection (not for driving).",
     image: "/assets/category-4.jpg",
+
   },
 ];
 
@@ -186,20 +187,24 @@ export default function PhotokeratitisPost() {
                   {eyewearExamples.map((item) => (
                     <div
                       key={item.title}
-                      className="rounded-[var(--radius)] border border-[var(--border)] bg-white"
+                      className="overflow-hidden rounded-[var(--radius)] border border-[var(--border)] bg-white shadow-[0_6px_16px_rgba(0,0,0,0.08)] transition-shadow hover:shadow-[0_10px_22px_rgba(0,0,0,0.12)]"
                     >
-                      <div className="relative aspect-[4/3] overflow-hidden rounded-t-[var(--radius)] bg-[var(--surface)]">
+                      <div className="relative aspect-[4/3] overflow-hidden bg-[var(--surface)]">
                         {item.image ? (
                           <Image
                             src={item.image}
                             alt={`${item.title} sunglasses example`}
                             fill
                             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                            style={{ objectFit: "cover" }}
+                            style={{
+                              objectFit: "cover",
+                              objectPosition: item.objectPosition ?? "center",
+                            }}
                           />
                         ) : null}
+                        <div className="absolute inset-0 bg-linear-to-t from-black/10 via-black/0 to-black/0" />
                       </div>
-                      <div className="p-4">
+                      <div className="border-t border-[var(--border)] p-4">
                         <h4 className="text-base font-semibold text-[#1f1f1f]">
                           {item.title}
                         </h4>
