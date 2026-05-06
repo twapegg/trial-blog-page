@@ -161,7 +161,7 @@ export default function PhotokeratitisPost() {
                   Choosing sunglasses that actually protect
                 </h2>
                 <p>
-                  <strong>Not all sunglasses protect eyes equally.</strong>
+                  <strong>Not all sunglasses protect eyes equally.</strong>{" "}
                   When you’re picking sunnies for the family, look for ones
                   labelled under the{" "}
                   <strong>Australian and New Zealand Standard</strong> with a{" "}
