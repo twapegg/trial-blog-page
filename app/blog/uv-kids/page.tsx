@@ -63,7 +63,6 @@ const eyewearExamples = [
     title: "Category 4",
     summary: "Maximum protection (not for driving).",
     image: "/assets/category-4.jpg",
-
   },
 ];
 
@@ -127,21 +126,28 @@ export default function PhotokeratitisPost() {
                   <p key={index}>{text}</p>
                 ))}
 
-                <figure className="relative mt-6 overflow-hidden rounded-[var(--radius)] border border-[var(--border)] bg-[var(--surface)] p-5 shadow-[0_12px_30px_rgba(0,0,0,0.08)] sm:p-6">
-                  <div className="absolute -top-6 right-4 text-7xl font-extrabold text-black/5">
-                    “
-                  </div>
-                  <figcaption className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[var(--muted)]">
-                    Eyecare Kids optometrist Dr. Christine Do states
-                  </figcaption>
-                  <blockquote className="mt-3 border-l-4 border-[var(--primary)] pl-4 text-base italic text-[#1f1f1f]">
-                    “You may not see the affects of sun damage straight away,
-                    but <strong>cumulative UV exposure</strong> can cause
-                    <strong> irreversible damage</strong> many years later
-                    including cataracts, cancers, pyteriums and macula
-                    degeneration.”
-                  </blockquote>
-                </figure>
+                <motion.div
+                  initial={{ opacity: 0, y: 18 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.4 }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
+                >
+                  <figure className="relative mt-6 overflow-hidden rounded-[var(--radius)] border border-[var(--border)] bg-[var(--surface)] p-5 shadow-[0_12px_30px_rgba(0,0,0,0.08)] sm:p-6">
+                    <div className="absolute -top-6 right-4 text-7xl font-extrabold text-black/5">
+                      “
+                    </div>
+                    <figcaption className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[var(--muted)]">
+                      Eyecare Kids optometrist Dr. Christine Do states
+                    </figcaption>
+                    <blockquote className="mt-3 border-l-4 border-[var(--primary)] pl-4 text-base italic text-[#1f1f1f]">
+                      “You may not see the affects of sun damage straight away,
+                      but <strong>cumulative UV exposure</strong> can cause
+                      <strong> irreversible damage</strong> many years later
+                      including cataracts, cancers, pyteriums and macula
+                      degeneration.”
+                    </blockquote>
+                  </figure>
+                </motion.div>
               </motion.div>
 
               <motion.div
@@ -196,10 +202,7 @@ export default function PhotokeratitisPost() {
                             alt={`${item.title} sunglasses example`}
                             fill
                             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                            style={{
-                              objectFit: "cover",
-                              objectPosition: item.objectPosition ?? "center",
-                            }}
+                            style={{ objectFit: "cover" }}
                           />
                         ) : null}
                         <div className="absolute inset-0 bg-linear-to-t from-black/10 via-black/0 to-black/0" />
