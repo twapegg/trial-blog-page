@@ -161,12 +161,11 @@ export default function PhotokeratitisPost() {
                   Choosing sunglasses that actually protect
                 </h2>
                 <p>
-                  <strong>Not all sunglasses protect eyes equally.</strong>{" "}
-                  When you’re picking sunnies for the family, look for ones
-                  labelled under the{" "}
-                  <strong>Australian and New Zealand Standard</strong> with a{" "}
-                  <strong>lens category rating of 2, 3 or 4</strong>. Sunglasses
-                  in these categories meet the standard for{" "}
+                  <strong>Not all sunglasses protect eyes equally.</strong> When
+                  you’re picking sunnies for the family, look for ones labelled
+                  under the <strong>Australian and New Zealand Standard</strong>{" "}
+                  with a <strong>lens category rating of 2, 3 or 4</strong>.
+                  Sunglasses in these categories meet the standard for{" "}
                   <strong>good UV protection</strong> and help block a high
                   level of harmful UV radiation.
                 </p>
