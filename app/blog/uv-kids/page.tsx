@@ -5,16 +5,47 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 const sunburnParagraphs = [
-  "We all know how to lather on sunscreen and pop a hat on the kids before a day outside. But it’s just as important to think about their eyes—because the sun can hurt them too.",
-  "Sunlight contains invisible ultraviolet (UV) rays that can bother and even injure the surface of the eye. When UV exposure is intense, this can lead to a condition similar to sunburn—but on the eyes instead of the skin. This can feel like grittiness, watering, soreness or being overly sensitive to bright light.",
-  "Kids often spend a lot of time outdoors laughing, running around or playing sport. They might not speak up when their eyes feel uncomfortable, so it’s up to us as parents to make sure they’re properly shielded from harmful rays.",
-  "In Australia, UV exposure can be strong even when it’s not blazing hot or it’s cloudy, and light can reflect off things like water, sand and concrete. Little eyes are more vulnerable to cumulative UV exposure over time, which can increase the risk of issues later in life—from glare sensitivity to more serious conditions that develop slowly with repeated sun exposure.",
+  <>
+    We all know how to lather on sunscreen and pop a hat on the kids before a
+    day outside. But it’s just as important to think about their
+    <strong> eyes</strong>—because <strong>the sun can hurt them too</strong>.
+  </>,
+  <>
+    Sunlight contains invisible <strong>ultraviolet (UV) rays</strong> that can
+    bother and even injure the surface of the eye. When UV exposure is intense,
+    this can lead to a condition similar to sunburn—but on the eyes instead of
+    the skin. This can feel like <strong>grittiness, watering, soreness</strong>{" "}
+    or being overly sensitive to bright light.
+  </>,
+  <>
+    Kids often spend a lot of time outdoors laughing, running around or playing
+    sport. They might not speak up when their eyes feel uncomfortable, so it’s
+    up to us as parents to make sure they’re
+    <strong> properly shielded</strong> from harmful rays.
+  </>,
+  <>
+    In Australia, <strong>UV exposure can be strong</strong> even when it’s not
+    blazing hot or it’s cloudy, and light can reflect off things like water,
+    sand and concrete. Little eyes are more vulnerable to
+    <strong> cumulative UV exposure</strong> over time, which can increase the
+    risk of issues later in life—from glare sensitivity to more serious
+    conditions that develop slowly with repeated sun exposure.
+  </>,
 ];
 
 const categoryList = [
-  "Category 2 offers good protection for everyday outdoor activities",
-  "Category 3 provides stronger protection and is ideal for bright conditions.",
-  "Category 4 offers very high protection but is not suitable for driving.",
+  {
+    label: "Category 2",
+    text: "offers good protection for everyday outdoor activities",
+  },
+  {
+    label: "Category 3",
+    text: "provides stronger protection and is ideal for bright conditions.",
+  },
+  {
+    label: "Category 4",
+    text: "offers very high protection but is not suitable for driving.",
+  },
 ];
 
 const eyewearExamples = [
@@ -95,13 +126,21 @@ export default function PhotokeratitisPost() {
                   <p key={index}>{text}</p>
                 ))}
 
-                <p>
-                  Eyecare Kids optometrist Dr Christine Do states, "You may not
-                  see the affects of sun damage straight away, but cumulative UV
-                  exposure can cause irreversible damage many years later
-                  including cataracts, cancers, pyteriums and macula
-                  degeneration."
-                </p>
+                <figure className="relative mt-6 overflow-hidden rounded-[var(--radius)] border border-[var(--border)] bg-[var(--surface)] p-5 shadow-[0_12px_30px_rgba(0,0,0,0.08)] sm:p-6">
+                  <div className="absolute -top-6 right-4 text-7xl font-extrabold text-black/5">
+                    “
+                  </div>
+                  <figcaption className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[var(--muted)]">
+                    Eyecare Kids optometrist Dr. Christine Do states
+                  </figcaption>
+                  <blockquote className="mt-3 border-l-4 border-[var(--primary)] pl-4 text-base italic text-[#1f1f1f]">
+                    “You may not see the affects of sun damage straight away,
+                    but <strong>cumulative UV exposure</strong> can cause
+                    <strong> irreversible damage</strong> many years later
+                    including cataracts, cancers, pyteriums and macula
+                    degeneration.”
+                  </blockquote>
+                </figure>
               </motion.div>
 
               <motion.div
@@ -115,52 +154,59 @@ export default function PhotokeratitisPost() {
                   Choosing sunglasses that actually protect
                 </h2>
                 <p>
-                  Not all sunglasses protect eyes equally. When you’re picking
-                  sunnies for the family, look for ones labelled under the
-                  Australian and New Zealand Standard with a lens category
-                  rating of 2, 3 or 4. Sunglasses in these categories meet the
-                  standard for good UV protection and help block a high level of
-                  harmful UV radiation.
+                  <strong>Not all sunglasses protect eyes equally.</strong>
+                  When you’re picking sunnies for the family, look for ones
+                  labelled under the{" "}
+                  <strong>Australian and New Zealand Standard</strong> with a{" "}
+                  <strong>lens category rating of 2, 3 or 4</strong>. Sunglasses
+                  in these categories meet the standard for{" "}
+                  <strong>good UV protection</strong> and help block a high
+                  level of harmful UV radiation.
                 </p>
                 <ul className="list-disc pl-5 text-[#2f2f2f]">
                   {categoryList.map((item) => (
-                    <li key={item}>{item}</li>
+                    <li key={item.label}>
+                      <strong>{item.label}</strong> {item.text}
+                    </li>
                   ))}
                 </ul>
                 <p>
-                  Wraparound styles and well-fitting frames help stop UV rays
-                  sneaking in around the edges, and pairing sunglasses with a
-                  broad-brimmed hat gives even better coverage.
+                  <strong>Wraparound styles</strong> and well-fitting frames
+                  help stop UV rays sneaking in around the edges, and pairing
+                  sunglasses with a <strong>broad-brimmed hat</strong> gives
+                  even better coverage.
                 </p>
               </motion.div>
 
               <div className="mt-8">
                 <div
-                  className="mt-4 flex gap-4 overflow-x-auto scroll-smooth pb-3 snap-x snap-mandatory"
-                  aria-label="Eyewear examples carousel"
+                  className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+                  aria-label="Eyewear examples"
                 >
                   {eyewearExamples.map((item) => (
                     <div
                       key={item.title}
-                      className="min-w-[220px] snap-start rounded-[var(--radius)] border border-[var(--border)] bg-white p-4 shadow-sm sm:min-w-[260px]"
+                      className="rounded-[var(--radius)] border border-[var(--border)] bg-white"
                     >
-                      <div className="relative h-32 overflow-hidden rounded-md bg-[var(--surface)]">
+                      <div className="relative aspect-[4/3] overflow-hidden rounded-t-[var(--radius)] bg-[var(--surface)]">
                         {item.image ? (
                           <Image
                             src={item.image}
                             alt={`${item.title} sunglasses example`}
                             fill
-                            sizes="260px"
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                             style={{ objectFit: "cover" }}
                           />
                         ) : null}
                       </div>
-                      <h4 className="mt-3 text-base font-bold text-[#1f1f1f]">
-                        {item.title}
-                      </h4>
-                      <p className="mt-1 text-sm text-[var(--muted)]">
-                        {item.summary}
-                      </p>
+                      <div className="p-4">
+                        <h4 className="text-base font-semibold text-[#1f1f1f]">
+                          {item.title}
+                        </h4>
+                        <p className="mt-1 text-sm text-[var(--muted)]">
+                          {item.summary}
+                        </p>
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -179,14 +225,15 @@ export default function PhotokeratitisPost() {
                 <p>
                   Protecting children’s eyes shouldn’t be something you only
                   think about on beach days or during summer holidays. Making
-                  quality sunglasses part of everyday life—for school drop-offs,
-                  sport, park visits and weekends outdoors—can help protect
-                  their eyesight long term. If you’re looking for sunglasses
-                  that meet these standards, Eyecare Kids has a wide range of
-                  options for both children and adults. We also have a special
-                  interest in customising sunglasses to suit individual
+                  quality sunglasses part of <strong>everyday life</strong>—for
+                  school drop-offs, sport, park visits and weekends outdoors—can
+                  help protect their eyesight <strong>long term</strong>. If
+                  you’re looking for sunglasses that meet these standards,
+                  Eyecare Kids has a wide range of options for both children and
+                  adults. We also have a special interest in
+                  <strong> customising sunglasses</strong> to suit individual
                   prescriptions, so your family can enjoy clear vision and
-                  reliable UV protection every day.
+                  <strong> reliable UV protection</strong> every day.
                 </p>
               </motion.div>
             </div>
@@ -276,9 +323,17 @@ export default function PhotokeratitisPost() {
                 Quick takeaways
               </h3>
               <ul className="mt-4 space-y-3 text-sm text-[var(--muted)]">
-                <li>UV damage can affect eyes even on cloudy days.</li>
-                <li>Look for lens category ratings 2–4 for real protection.</li>
-                <li>Wraparound frames and hats improve coverage.</li>
+                <li>
+                  <strong>UV damage</strong> can affect eyes even on cloudy
+                  days.
+                </li>
+                <li>
+                  Look for <strong>lens category ratings 2–4</strong> for real
+                  protection.
+                </li>
+                <li>
+                  <strong>Wraparound frames and hats</strong> improve coverage.
+                </li>
               </ul>
             </div>
 
